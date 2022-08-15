@@ -1,0 +1,50 @@
+body{
+    background-color: #cd853f;
+}
+.padding-container {
+    padding: 25px 20px;
+    background-color: #cd853f;
+}
+.table{
+    -webkit-box-shadow: 3px -2px 28px 0px rgba(244,165,96,0.8);
+    -moz-box-shadow: 3px -2px 28px 0px rgba(244,165,96,0.8);
+    box-shadow: 3px -2px 28px 0px rgba(244,165,96,0.8);
+    border-radius: 10px 10px 10px 10px
+}
+
+
+.prozor-knjiga {
+    background-color: #cd853f;
+    padding: 20px 20px;
+    width: 650px;
+    display: none;
+    bottom: 0px;
+}
+
+.hidden-knjiga {
+    display: block !important;
+}
+
+.prozor-knjiga input,
+.prozor-knjiga textarea {
+    margin-bottom: 20px;
+}
+
+
+.izmeni-knjigu {
+    display: none;
+    background-color: rgb(234, 250, 255);
+    padding: 20px 40px;
+    width: 650px;
+    
+}
+
+.izmeni-knjigu input,
+.izmeni-knjigu textarea {
+    margin-bottom: 20px;
+}
+
+#search {
+    display: inline;
+    width: 100px;
+}

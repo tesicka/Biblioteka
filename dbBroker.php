@@ -1,7 +1,7 @@
 <?php
 $server="localhost";
 $database="biblioteka";
-$user="user";
+$user="root";
 $password="";
 
 $connection=new mysqli($server,$user,$password,$database);

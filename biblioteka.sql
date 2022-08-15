@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2022 at 06:04 PM
+-- Generation Time: Jul 15, 2022 at 04:07 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -31,7 +31,7 @@ CREATE TABLE `iznajmljivanje` (
   `id_pozajmice` int(11) NOT NULL,
   `knjiga` varchar(50) NOT NULL,
   `autor` varchar(30) NOT NULL,
-  `datum_vracanja` date NOT NULL,
+  `vrsta` varchar(30) NOT NULL,
   `id_korisnik` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,15 +39,15 @@ CREATE TABLE `iznajmljivanje` (
 -- Dumping data for table `iznajmljivanje`
 --
 
-INSERT INTO `iznajmljivanje` (`id_pozajmice`, `knjiga`, `autor`, `datum_vracanja`, `id_korisnik`) VALUES
-(1, 'Dervis i smrt', 'Mesa Selimovic', '2022-05-10', 2),
-(2, 'Zov divljine', 'Jack London', '2022-07-15', 3),
-(3, 'Majstor i Margarita', 'Mihail Bulgakov', '2022-08-01', 3),
-(4, 'Sumnjivo lice', 'Branislav Nusic', '2022-05-25', 4),
-(5, 'Gospodja Ministarka', 'Branislav Nusic', '2022-07-13', 1),
-(6, 'Zlocin i kazna', 'Fjodor Dostojevski', '2022-06-28', 4),
-(7, 'Alhemicar', 'Paulo Koeljo', '2022-05-28', 2),
-(8, 'Ana Karenjina', 'Lav Tolstoj', '2022-06-08', 3);
+INSERT INTO `iznajmljivanje` (`id_pozajmice`, `knjiga`, `autor`, `vrsta`, `id_korisnik`) VALUES
+(1, 'Dervis i smrt', 'Mesa Selimovic', 'roman', 2),
+(2, 'Zov divljine', 'Jack London', 'roman', 3),
+(3, 'Majstor i Margarita', 'Mihail Bulgakov', 'roman', 3),
+(4, 'Sumnjivo lice', 'Branislav Nusic', 'komedija', 4),
+(5, 'Gospodja Ministarka', 'Branislav Nusic', 'komedija', 1),
+(6, 'Zlocin i kazna', 'Fjodor Dostojevski', 'roman', 4),
+(7, 'Alhemicar', 'Paulo Koeljo', 'roman', 2),
+(8, 'Ana Karenjina', 'Lav Tolstoj', 'roman', 3);
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,8 @@ ALTER TABLE `iznajmljivanje`
 -- Indexes for table `korisnik`
 --
 ALTER TABLE `korisnik`
-  ADD PRIMARY KEY (`id_korisnik`);
+  ADD PRIMARY KEY (`id_korisnik`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
