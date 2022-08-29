@@ -83,8 +83,6 @@
 
         <div style="display: flex; align-items:center; padding-left:20px;">
             <button style="margin-right:20px; margin-bottom:30px; padding:0px; width:100px; height:40px" type="button" id="nova-pozajmica" class="btn btn-success">Iznajmi knjigu</button>
-            <button style="margin-right:20px; margin-bottom:30px; padding:0px; width:40px; height:40px" type="button" class="btn btn-danger btn btn-info" id="sortiraj"><i class="fas fa-sort"></i></button>
-            <input style="margin-right:20px; width:200px; display:inline; margin-bottom:30px" type="text" class="form-control" id="search" placeholder="Pretraži.">
         </div>
 
         <div class="prozor-knjiga" style="padding-left:20px;">
