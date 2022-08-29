@@ -11,7 +11,7 @@ if(isset($_POST["id_korisnik"])) {
     $pozajmica = $_POST['id_pozajmice'];
 
     
-    $result = mysqli_query($connection, "UPDATE iznajmljivanje SET knjiga='$knjiga', autor='$autor', vrsta='$vrsta' WHERE id_pozajmice='$pozajmica'");
+    $result = mysqli_query($connection, "UPDATE iznajmljivanje SET knjiga='$naziv', autor='$autor', vrsta='$vrsta' WHERE id_pozajmice='$pozajmica'");
     if($result) {
         echo "Success";
     } else {

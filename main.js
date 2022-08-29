@@ -51,11 +51,14 @@ $(".vrati-knjigu-button").click(function (e) {
         url: 'handler/delete.php',
         type: 'post',
         data: {
-            id: id
+            id_pozajmice: id
         }
     });
 
+
+
     request.done(function (response) {
+        console.log(response)
         if (response === 'Success') {
             td.remove();
             alert("Vratili ste knigu.");
@@ -90,7 +93,7 @@ $(".izmeni-knjigu-button").click(function () {
 
 // update
 
-$("#btnIzmeni").submit(function (e) {
+$("#izmeniKnjigu").submit(function (e) {
     e.preventDefault();
     let id = $("#id-pozajmice").val();
     let knjiga = $("#knjiga-input").val();
@@ -103,7 +106,7 @@ $("#btnIzmeni").submit(function (e) {
         url: 'handler/update.php',
         type: 'post',
         data: {
-            id: id,
+            id_pozajmice: id,
             knjiga: knjiga,
             autor: autor,
             vrsta: vrsta,
@@ -112,8 +115,10 @@ $("#btnIzmeni").submit(function (e) {
     });
 
     request.done(function (response) {
+
+        console.log(response)
         if (response === 'Success') {
-            alert("Uspesno ste promenili datum vracanja knige.");
+            alert("Uspesno ste promenili knjigu.");
             location.reload(true);
         }
     });

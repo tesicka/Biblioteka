@@ -106,7 +106,7 @@
         </div>
 
         <div class="izmeni-knjigu"  style="padding-left:20px;">
-            <form action="#" method="POST" id="izmeniKnjigu">
+            <form id="izmeniKnjigu">
                  <div class="form-group">
                     <label>ID pozajmice</label>
                     <input name="id" id="id-pozajmice" disabled type="text" class="form-control" value="">
@@ -126,10 +126,9 @@
                 <div class="form-group">
                     <label>ID korisnika</label>
                     <input name="id_korisnik" id="id-korisnik" disabled type="text" class="form-control">
-                    <!-- ovde ne hvata id korisnika-->
                 </div>
                 
-                <button id="btnIzmeni" formmethod="POST" type="submit" class="btn btn-success">Izmeni</button>
+                <button id="btnIzmeni" type="submit" class="btn btn-success">Izmeni</button>
             </form>
         </div>
 

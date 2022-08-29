@@ -20,13 +20,13 @@ class Iznajmljivanje{
         return $connection->query($query);
     }
 
-    public static function delete(){  // obrisi
+    public function delete($connection){  // obrisi
         $sql = "DELETE FROM iznajmljivanje WHERE id_pozajmice=$this->id_pozajmice";
         return $connection->query($sql);
     }
     
-    public static function find(){  // pronadji sve
-        $sql = "SELECT * FROM iznajmljivanje WHERE id_pozajmice=$id_pozajmice";
+    public function find(){  // pronadji sve
+        $sql = "SELECT * FROM iznajmljivanje WHERE id_pozajmice=$this->id_pozajmice";
         $myObj = array();
         if($rez = $connection->query($sql)) {
             while($row = $result->fetch_array(1)){
