@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 15, 2022 at 04:07 PM
+-- Generation Time: Aug 31, 2022 at 02:55 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -40,14 +40,15 @@ CREATE TABLE `iznajmljivanje` (
 --
 
 INSERT INTO `iznajmljivanje` (`id_pozajmice`, `knjiga`, `autor`, `vrsta`, `id_korisnik`) VALUES
-(1, 'Dervis i smrt', 'Mesa Selimovic', 'roman', 2),
-(2, 'Zov divljine', 'Jack London', 'roman', 3),
 (3, 'Majstor i Margarita', 'Mihail Bulgakov', 'roman', 3),
-(4, 'Sumnjivo lice', 'Branislav Nusic', 'komedija', 4),
 (5, 'Gospodja Ministarka', 'Branislav Nusic', 'komedija', 1),
 (6, 'Zlocin i kazna', 'Fjodor Dostojevski', 'roman', 4),
 (7, 'Alhemicar', 'Paulo Koeljo', 'roman', 2),
-(8, 'Ana Karenjina', 'Lav Tolstoj', 'roman', 3);
+(8, 'Ana Karenjina', 'Lav Tolstoj', 'roman', 3),
+(9, 'Robinzon Kruso', 'Daniel Defo', 'roman', 3),
+(11, 'Robinzon Kruso', 'Daniel Defo', 'roman', 3),
+(12, 'Zivot Cehova', 'Irene Nemirovski', 'biografija', 1),
+(13, 'Cekajuci Godoa', 'Samjuel Beket', 'drama', 4);
 
 -- --------------------------------------------------------
 
@@ -97,7 +98,7 @@ ALTER TABLE `korisnik`
 -- AUTO_INCREMENT for table `iznajmljivanje`
 --
 ALTER TABLE `iznajmljivanje`
-  MODIFY `id_pozajmice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_pozajmice` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `korisnik`
