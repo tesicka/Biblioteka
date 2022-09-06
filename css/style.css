@@ -48,3 +48,7 @@ body{
     display: inline;
     width: 100px;
 }
+
+.err{
+    color: white;
+}

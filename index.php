@@ -33,6 +33,10 @@ body{
 box-shadow: -1px 4px 26px 11px rgba(0,0,0,0.75);
 }
 
+.err{
+    color:white;
+}
+
 </style>
     
 
@@ -72,7 +76,7 @@ require "dbBroker.php";
                     <label for="password" style="color:#48bf53;">Password</label>
                     <input type="password" class="form-control" name="password" id="password" placeholder="Password">
                 </div>
-                <div>
+                <div class="err">
                     <?php if (isset($_POST['err'])) {
                         print_r($_POST['err']);
                     }?>

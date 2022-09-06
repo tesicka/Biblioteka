@@ -43,18 +43,5 @@ class Iznajmljivanje{
 
     }
 
-    function getByKorisnik($id_korisnik, $connection){  // doprema sve iz tabele gde je korisnicki id prosledjeni parametar funkcije
-        $sql = "SELECT * FROM iznajmljivanje WHERE id_korisnik=$id_korisnik;";          // koristimo za prikaz samo korisnikovih
-        $myObj = array();
-        if($rez = $connection->query($sql)) {
-            while($row = $rez->fetch_array(1)){
-                $myObj[]= $row;
-            }
-        }
-        return $myObj;
-        
-    }
-
-
 
 ?>

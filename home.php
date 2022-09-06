@@ -6,11 +6,10 @@
     session_start();
     if(!isset($_SESSION['id_korisnik'])){
         echo "ne moze";
-        header("refresh:5;url=index.php");
+        header("refresh:1;url=index.php");
     }
     else{
-      //  echo "radi";
-    //  $nizKorisnikovihKnjiga=getByKorisnik($_SESSION['id_korisnik'],$connection); samo da moze da gleda taj korisnik 
+ 
     
     $pozajmice = Iznajmljivanje::show($connection);
 

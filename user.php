@@ -14,15 +14,16 @@ class User{
     public static function logIn($username, $password, mysqli $connection ){
         $query="SELECT * FROM korisnik WHERE username='$username';";
         $result = $connection->query($query);
-        if ($result->num_rows > 0) {
+       if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 if($row['password'] == $password){
                     $_SESSION['id_korisnik']=$row['id_korisnik'];
                     return true;
-                }
+                }$_POST['err']="Pogresna lozinka";
+                return false;
             }
         }else{
-            $_POST['err']="Pogresna lozinka";
+            $_POST['err']="Ne postoji dati korisnik";
             return false;
         }
     }
